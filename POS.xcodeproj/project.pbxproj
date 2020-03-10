@@ -15,6 +15,7 @@
 		873C4B2A2417EE3100EB8AF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873C4B282417EE3100EB8AF5 /* LaunchScreen.storyboard */; };
 		873C4B352417EE3100EB8AF5 /* POSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C4B342417EE3100EB8AF5 /* POSTests.swift */; };
 		873C4B402417EE3100EB8AF5 /* POSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C4B3F2417EE3100EB8AF5 /* POSUITests.swift */; };
+		873C4B502418220600EB8AF5 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C4B4F2418220600EB8AF5 /* DesignableUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		873C4B3B2417EE3100EB8AF5 /* POSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		873C4B3F2417EE3100EB8AF5 /* POSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSUITests.swift; sourceTree = "<group>"; };
 		873C4B412417EE3100EB8AF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		873C4B4F2418220600EB8AF5 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				873C4B262417EE3000EB8AF5 /* Assets.xcassets */,
 				873C4B282417EE3100EB8AF5 /* LaunchScreen.storyboard */,
 				873C4B2B2417EE3100EB8AF5 /* Info.plist */,
+				873C4B4F2418220600EB8AF5 /* DesignableUITextField.swift */,
 			);
 			path = POS;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				873C4B222417EE2F00EB8AF5 /* ViewController.swift in Sources */,
 				873C4B1E2417EE2F00EB8AF5 /* AppDelegate.swift in Sources */,
 				873C4B202417EE2F00EB8AF5 /* SceneDelegate.swift in Sources */,
+				873C4B502418220600EB8AF5 /* DesignableUITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
