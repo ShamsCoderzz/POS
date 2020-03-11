@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dontHaveAnAccount: UIButton!
     @IBOutlet weak var signIn: UIButton!
+    
+    var apiRequest = APIRequest()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,8 +24,15 @@ class ViewController: UIViewController {
         
         signIn.layer.cornerRadius = 5
         signIn.layer.borderColor = UIColor.black.cgColor
-
         
+        
+        apiRequest.LoginAPIRequest(username: "sss", password: "sss") { (result , error) in
+            
+            
+            if let _result = result {
+                print(_result)
+            }
+        }
         
         
     }
