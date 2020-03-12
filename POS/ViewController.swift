@@ -8,9 +8,33 @@
 
 import UIKit
 
+
+extension ViewController : UITextFieldDelegate {
+    
+    // when user click on return on search
+          func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+              // closed keyboard
+            switch textField {
+            case userName:
+                password.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+            }
+              return false
+          }
+          
+       
+          
+          // when user click on search btn
+          func textFieldDidEndEditing(_ textField: UITextField) {
+              
+          }
+    
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
-    
+    @IBOutlet weak var password: UITextField!
     @IBOutlet weak var dontHaveAnAccount: UIButton!
     @IBOutlet weak var signIn: UIButton!
     
@@ -18,23 +42,34 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userName.delegate = self
+        password.delegate = self
         // Do any additional setup after loading the view.
         
-        addLeftImageToUITextField(textField: userName , img: #imageLiteral(resourceName: "icons.png") )
+     //   addLeftImageToUITextField(textField: userName , img: #imageLiteral(resourceName: "icons.png") )
         
-        signIn.layer.cornerRadius = 5
-        signIn.layer.borderColor = UIColor.black.cgColor
+     
         
+        addBorderAndRound(btn : signIn)
+        addBorderAndRound(btn: dontHaveAnAccount)
         
-        apiRequest.LoginAPIRequest(username: "sss", password: "sss") { (result , error) in
-            
-            
+    }
+    
+    
+    
+    func  LoginAPI(username : String , password : String){
+        
+        apiRequest.LoginAPIRequest(username, password) { (result, error) in
             if let _result = result {
                 print(_result)
             }
         }
-        
-        
+    }
+    
+    func addBorderAndRound(btn : UIButton){
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.black.cgColor
     }
     
     

@@ -13,7 +13,7 @@ struct APIRequest {
     let baseUrl = "http://ec2-18-206-250-232.compute-1.amazonaws.com:3000"
     
     
-    func LoginAPIRequest(username: String, password: String, completion: @escaping ([String: Any]?, Error?) -> Void) {
+    func LoginAPIRequest(_ username: String, _ password: String, completion: @escaping ([String: Any]?, Error?) -> Void) {
         
         
        let loginURL = URL(string: "\(baseUrl)/user/login")!
@@ -23,14 +23,9 @@ struct APIRequest {
 
         let parameters  : [String: Any] = ["username" : username,"password" : password]
            
-
         do{
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
-            
-            let json = try JSONSerialization.data(withJSONObject: parameters)
-            print(json)
-            
-            
         }catch {
             print(error.localizedDescription)
         }
@@ -41,6 +36,8 @@ struct APIRequest {
         //create dataTask using the session object to send data to the server
         let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
             let response = response as? HTTPURLResponse
+            
+            print(response!)
 
             if error != nil {
                 completion(nil, error)
