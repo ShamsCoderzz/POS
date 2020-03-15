@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,17 +13,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="POS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-2C-SNB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Cn-HB-3lj">
-                                <rect key="frame" x="20" y="50" width="374" height="200"/>
+                                <rect key="frame" x="20" y="94" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="jgv-S5-gF6"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iiF-U0-Wxy">
-                                <rect key="frame" x="20" y="468" width="374" height="98"/>
+                                <rect key="frame" x="20" y="594" width="374" height="98"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAE-cF-ipx" customClass="DesignableUITextField" customModule="POS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -64,7 +67,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QMQ-Bf-vLT">
-                                <rect key="frame" x="20" y="596" width="374" height="90"/>
+                                <rect key="frame" x="20" y="722" width="374" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMk-7B-uEx">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -99,16 +102,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QMQ-Bf-vLT" firstAttribute="top" secondItem="iiF-U0-Wxy" secondAttribute="bottom" constant="30" id="0fl-Gd-p02"/>
-                            <constraint firstItem="1Cn-HB-3lj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="56E-D3-6jL"/>
+                            <constraint firstItem="qI0-2C-SNB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1FV-2z-iWY"/>
+                            <constraint firstItem="1Cn-HB-3lj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="94" id="56E-D3-6jL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iiF-U0-Wxy" secondAttribute="trailing" constant="20" id="Hlv-zv-tmM"/>
+                            <constraint firstItem="qI0-2C-SNB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IbD-5t-0pi"/>
                             <constraint firstItem="QMQ-Bf-vLT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M4U-LM-LpV"/>
                             <constraint firstItem="1Cn-HB-3lj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SIZ-8D-m65"/>
+                            <constraint firstItem="qI0-2C-SNB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UZC-Dr-fep"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Cn-HB-3lj" secondAttribute="trailing" constant="20" id="Vsp-Tg-y3h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QMQ-Bf-vLT" secondAttribute="trailing" constant="20" id="fSE-PQ-raN"/>
                             <constraint firstItem="iiF-U0-Wxy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hHe-6U-fca"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QMQ-Bf-vLT" secondAttribute="bottom" constant="40" id="x3m-K5-c9z">
                                 <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                             </constraint>
+                            <constraint firstItem="qI0-2C-SNB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgB-3R-HOb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -121,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.43478260869566" y="103.53260869565219"/>
+            <point key="canvasLocation" x="130.43478260869566" y="103.125"/>
         </scene>
     </scenes>
     <resources>

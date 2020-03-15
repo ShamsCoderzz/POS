@@ -59,27 +59,59 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginClickListner(_ sender: UIButton) {
-        LoginAPI(username: userName.text!, password: password.text!)
+        
+        
+        if userName.text!.isEmpty {
+            self.alertDialog("Username Required")
+            return
+        }
+        
+        if password.text!.isEmpty {
+            self.alertDialog("Password Required")
+            return
+        }
+        
+        LoginAPI(userName.text!,password.text!)
     }
     
     
     @IBAction func DontHaveAnAccocuntListner(_ sender: Any) {
     }
     
+    func alertDialog(_ error: String) {
+        
+        DispatchQueue.main.async {
+             let alert=UIAlertController(title: "Warning!!", message: error, preferredStyle: .alert)
+                 self.present(alert, animated: true, completion: nil)
+                    // add button
+                    let cancelBtn=UIAlertAction(title: "Cancle", style: .cancel) { (action) in
+                        print("cancel")
+                    }
+                    
+                    alert.addAction(cancelBtn)
+        }
+    }
     
-    func  LoginAPI(username : String , password : String){
+    
+    func  LoginAPI(_ username : String ,_ password : String){
         
         apiRequest.LoginAPIRequest(username, password) { (result, error) in
-            guard let error = error else { return  }
-            guard let response = result else { print(error.localizedDescription) ;  return }
+            guard let response = result else {
+                self.alertDialog(error!.localizedDescription) ;  return }
             
             if response.status == 1 {
                 
             }else {
-                print(response.message!)
+                
+                self.alertDialog(response.message!)
+                
             }
         }
     }
+    
+    
+  
+
     
     func addBorderAndRound(btn : UIButton){
         btn.layer.cornerRadius = 5

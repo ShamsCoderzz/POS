@@ -105,16 +105,16 @@
 		873C4B1C2417EE2F00EB8AF5 /* POS */ = {
 			isa = PBXGroup;
 			children = (
-				87CAFB34241D9F1A00254F15 /* Model */,
 				873C4B1D2417EE2F00EB8AF5 /* AppDelegate.swift */,
 				873C4B1F2417EE2F00EB8AF5 /* SceneDelegate.swift */,
-				873C4B212417EE2F00EB8AF5 /* ViewController.swift */,
-				873C4B232417EE2F00EB8AF5 /* Main.storyboard */,
+				87CAFB34241D9F1A00254F15 /* Model */,
+				873DFE50241EBDF6009E4D71 /* Controller */,
+				873DFE4F241EBDE6009E4D71 /* View */,
+				873DFE4E241E9E45009E4D71 /* Http */,
 				873C4B262417EE3000EB8AF5 /* Assets.xcassets */,
 				873C4B282417EE3100EB8AF5 /* LaunchScreen.storyboard */,
 				873C4B2B2417EE3100EB8AF5 /* Info.plist */,
 				873C4B4F2418220600EB8AF5 /* DesignableUITextField.swift */,
-				8770478B2419672C004DA60A /* APIRequest.swift */,
 			);
 			path = POS;
 			sourceTree = "<group>";
@@ -135,6 +135,30 @@
 				873C4B412417EE3100EB8AF5 /* Info.plist */,
 			);
 			path = POSUITests;
+			sourceTree = "<group>";
+		};
+		873DFE4E241E9E45009E4D71 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				8770478B2419672C004DA60A /* APIRequest.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		873DFE4F241EBDE6009E4D71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				873C4B232417EE2F00EB8AF5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		873DFE50241EBDF6009E4D71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				873C4B212417EE2F00EB8AF5 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		87CAFB34241D9F1A00254F15 /* Model */ = {

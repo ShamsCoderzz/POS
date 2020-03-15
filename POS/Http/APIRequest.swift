@@ -13,7 +13,14 @@ struct APIRequest {
     let baseUrl = "http://ec2-18-206-250-232.compute-1.amazonaws.com:3000"
     
     
-    func LoginAPIRequest(_ username: String, _ password: String, completion: @escaping (LoginResponse?, Error?) -> Void) {
+    func aa(string : String , completion : @escaping (Int,  String) -> Void ){
+        
+        
+        completion(10, "")
+    }
+    
+    // escaping performing any asynchronous tasks inside the function like  function store data into database or update UI on same function 
+    func LoginAPIRequest(_ username: String, _ password: String, completion: @escaping (LoginResponse?, Error?) -> Void ){
         
         
        let loginURL = URL(string: "\(baseUrl)/user/login")!
@@ -52,7 +59,7 @@ struct APIRequest {
             
             do {
                 let json = try JSONDecoder().decode(LoginResponse.self, from: data!)
-                completion(json, error)
+                completion(json, nil)
             }catch {
                 completion(nil, error)
             }
