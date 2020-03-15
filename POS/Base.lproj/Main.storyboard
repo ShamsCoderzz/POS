@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Cn-HB-3lj">
+                                <rect key="frame" x="20" y="50" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="jgv-S5-gF6"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iiF-U0-Wxy">
                                 <rect key="frame" x="20" y="468" width="374" height="98"/>
                                 <subviews>
@@ -25,7 +31,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="jkp-Gg-4gL"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="person.crop.circle" catalog="system"/>
@@ -70,6 +76,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginClickListner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOx-MF-ZCS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdd-wa-3Kl">
                                         <rect key="frame" x="0.0" y="50" width="374" height="40"/>
@@ -80,15 +89,12 @@
                                         <state key="normal" title="DON'T HAVE AN ACCOUNT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="DontHaveAnAccocuntListner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07L-yY-TH7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Cn-HB-3lj">
-                                <rect key="frame" x="20" y="50" width="374" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="jgv-S5-gF6"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

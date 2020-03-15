@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E9046FE3-7C14-4968-80A5-B636CF955538"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "POS/APIRequest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "LoginAPIRequest(_:_:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "489BFC0D-A521-4773-82A3-565329A056C0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -46,8 +30,8 @@
             filePath = "POS/APIRequest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "LoginAPIRequest(_:_:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -55,32 +39,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E4023F4B-0FB0-44BC-AE3C-197E7960B167"
+            uuid = "3FAF6F5A-599F-4456-8B0E-C0805FEDF10E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "POS/APIRequest.swift"
+            filePath = "POS/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "LoginAPIRequest(_:_:completion:)"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "LoginAPI(username:password:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9EA8D4FD-98B9-4A9D-8326-43B2F154BCCD"
-            shouldBeEnabled = "No"
+            uuid = "60800B3B-BC30-4EA9-BB97-63F11F0FE359"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "POS/APIRequest.swift"
+            filePath = "POS/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "LoginAPIRequest(_:_:completion:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "LoginAPI(username:password:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

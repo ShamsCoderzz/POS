@@ -54,15 +54,29 @@ class ViewController: UIViewController {
         addBorderAndRound(btn : signIn)
         addBorderAndRound(btn: dontHaveAnAccount)
         
+                
+        
     }
     
+    @IBAction func loginClickListner(_ sender: UIButton) {
+        LoginAPI(username: userName.text!, password: password.text!)
+    }
+    
+    
+    @IBAction func DontHaveAnAccocuntListner(_ sender: Any) {
+    }
     
     
     func  LoginAPI(username : String , password : String){
         
         apiRequest.LoginAPIRequest(username, password) { (result, error) in
-            if let _result = result {
-                print(_result)
+            guard let error = error else { return  }
+            guard let response = result else { print(error.localizedDescription) ;  return }
+            
+            if response.status == 1 {
+                
+            }else {
+                print(response.message!)
             }
         }
     }
