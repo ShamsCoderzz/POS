@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-2C-SNB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Cn-HB-3lj">
                                 <rect key="frame" x="20" y="94" width="374" height="200"/>
                                 <constraints>
@@ -102,20 +99,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QMQ-Bf-vLT" firstAttribute="top" secondItem="iiF-U0-Wxy" secondAttribute="bottom" constant="30" id="0fl-Gd-p02"/>
-                            <constraint firstItem="qI0-2C-SNB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1FV-2z-iWY"/>
                             <constraint firstItem="1Cn-HB-3lj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="94" id="56E-D3-6jL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iiF-U0-Wxy" secondAttribute="trailing" constant="20" id="Hlv-zv-tmM"/>
-                            <constraint firstItem="qI0-2C-SNB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IbD-5t-0pi"/>
                             <constraint firstItem="QMQ-Bf-vLT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M4U-LM-LpV"/>
                             <constraint firstItem="1Cn-HB-3lj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SIZ-8D-m65"/>
-                            <constraint firstItem="qI0-2C-SNB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UZC-Dr-fep"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Cn-HB-3lj" secondAttribute="trailing" constant="20" id="Vsp-Tg-y3h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QMQ-Bf-vLT" secondAttribute="trailing" constant="20" id="fSE-PQ-raN"/>
                             <constraint firstItem="iiF-U0-Wxy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hHe-6U-fca"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QMQ-Bf-vLT" secondAttribute="bottom" constant="40" id="x3m-K5-c9z">
                                 <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                             </constraint>
-                            <constraint firstItem="qI0-2C-SNB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgB-3R-HOb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -133,8 +126,8 @@
     </scenes>
     <resources>
         <image name="ic_logo" width="414" height="128"/>
-        <image name="lock.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
+        <image name="lock.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <namedColor name="colorPrimary">
             <color red="0.32199999690055847" green="0.15700000524520874" blue="0.53299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

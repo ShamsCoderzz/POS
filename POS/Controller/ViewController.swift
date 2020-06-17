@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import Alamofire
+import NVActivityIndicatorView
 
 
-extension ViewController : UITextFieldDelegate {
+extension ViewController : UITextFieldDelegate, ApiResponseDelegate {
+   
+    func onFailure(error: String) {
+        
+        
+    }
+    
+    func onApiResponse(response : AFDataResponse<Any>, flag: String) {
+        
+        if flag == Constants.login {
+            print(response.data!)
+            parseLoginAPI(response : response.data!)
+        }
+    }
     
     // when user click on return on search
           func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -32,29 +47,24 @@ extension ViewController : UITextFieldDelegate {
     
 }
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var dontHaveAnAccount: UIButton!
     @IBOutlet weak var signIn: UIButton!
-    
-    var apiRequest = APIRequest()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userName.delegate = self
         password.delegate = self
+        APIRequest.delegate = self
         // Do any additional setup after loading the view.
         
      //   addLeftImageToUITextField(textField: userName , img: #imageLiteral(resourceName: "icons.png") )
         
-     
-        
         addBorderAndRound(btn : signIn)
         addBorderAndRound(btn: dontHaveAnAccount)
-        
-                
         
     }
     
@@ -62,12 +72,12 @@ class ViewController: UIViewController {
         
         
         if userName.text!.isEmpty {
-            self.alertDialog("Username Required")
+            alertDialog("Username Required")
             return
         }
         
         if password.text!.isEmpty {
-            self.alertDialog("Password Required")
+            alertDialog("Password Required")
             return
         }
         
@@ -76,36 +86,47 @@ class ViewController: UIViewController {
     
     
     @IBAction func DontHaveAnAccocuntListner(_ sender: Any) {
+    
+    
+    
     }
     
-    func alertDialog(_ error: String) {
-        
-        DispatchQueue.main.async {
-             let alert=UIAlertController(title: "Warning!!", message: error, preferredStyle: .alert)
-                 self.present(alert, animated: true, completion: nil)
-                    // add button
-                    let cancelBtn=UIAlertAction(title: "Cancle", style: .cancel) { (action) in
-                        print("cancel")
-                    }
-                    
-                    alert.addAction(cancelBtn)
-        }
-    }
+
     
     
     func  LoginAPI(_ username : String ,_ password : String){
         
-        apiRequest.LoginAPIRequest(username, password) { (result, error) in
-            guard let response = result else {
-                self.alertDialog(error!.localizedDescription) ;  return }
+        let parameters  : [String: Any] = ["username" : username,"password" : password]
+
+        startprogress()
+        APIRequest.callAPI(url: Constants.baseUrl + Constants.login , header: Constants.header, params: parameters , flagType: Constants.login)
+        
+        
+        
+//        apiRequest.LoginAPIRequest(username, password) { (result, error) in
+//            guard let response = result else {
+//                self.alertDialog(error!.localizedDescription) ;  return }
+//
+//            if response.status == 1 {
+//
+//            }else {
+//
+//                self.alertDialog(response.message!)
+//
+//            }
+//        }
+    }
+    
+    
+    
+    func parseLoginAPI(response : Data){
+        
+        let json = try! JSONDecoder().decode(LoginResponse.self, from: response)
+        
+        if json.status == 1 {
+         
+        }else {
             
-            if response.status == 1 {
-                
-            }else {
-                
-                self.alertDialog(response.message!)
-                
-            }
         }
     }
     
@@ -123,9 +144,7 @@ class ViewController: UIViewController {
     func addLeftImageToUITextField(textField : UITextField , img : UIImage){
         
         let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width/2, height: img.size.height/2))
-        
         leftImage.image = img
-        
         textField.leftView = leftImage
         textField.leftViewMode = .always
     }
